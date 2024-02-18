@@ -1,0 +1,99 @@
+.lg {
+    background-color: #181642;
+    height: 100vh;
+
+}
+
+.jobs {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;    
+}
+
+
+
+
+.mynav {
+    color: white;
+    background-color: #181642;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 1px 10px;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.main-heading {
+    color: #FF2C90;
+    font-weight: bolder;
+    font-size: 2.5em;
+}
+
+.job-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    border-radius: 1rem;
+    padding: 0rem ;
+    margin: 2rem;
+    width: 70%;
+}
+.banner{
+    display: flex;
+    justify-content: center;
+       
+}
+.banner img{
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+
+.form-box {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-top: 5px solid #181642;
+    border-left: 3px solid #181642;
+    border-radius: 10px;
+}
+
+.skill {
+    background-color: inherit;
+    border: 1px solid aqua;
+    color: aqua;
+    border-radius: .2rem;
+    margin: .2rem;
+
+}
+
+.details{
+    
+    padding: 2rem;
+}
+.error{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #181642;
+    height: 90vh;
+}
+.errormessage{
+    color: red;
+    font-size: 1.5rem;
+}
+.oops{
+    font-size: 3rem;
+    color: white;
+}

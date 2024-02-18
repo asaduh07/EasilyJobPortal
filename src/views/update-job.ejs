@@ -1,0 +1,78 @@
+<%if(errorMessage){%>
+  <div class="alert alert-warning" role="alert">
+      <%=errorMessage%>
+  </div>
+  <%}%>
+
+<div class="container p-3 mx-auto w-50 form-box my-5 rounded-md">
+  <h2 style="color: #181642" class="text-center mb-3">Update Job</h2>
+  <form action="/update-jobs" method="post">
+    <input type="hidden" class="form-control" id="id" name="id" value="<%=job.id%>" >
+
+
+    <select required class="form-select form-select-lg mb-3" id="jobcategory" name="jobcategory">
+      <option disabled selected >select job category</option>
+      <option value="Tech">Tech</option>
+      <option value="Non Tech">Non Tech</option>
+
+    </select>
+    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="jobdesignation">
+      <option disabled selected>select job designation</option>
+      <option value="HR">HR</option>
+      <option value="SDE">SDE</option>
+      <option value="DevOps">DevOps</option>
+      <option value="MERN Developer">MERN Developer</option>
+      <option value="MEAN Developer">MEAN Developer</option>
+      <option value="JAVA Developer">JAVA Developer</option>
+      <option value="Front-End Developer">Front-End Developer</option>
+      <option value="Back-End Developer">Back-End Developer</option>
+      <option value="Full Stack Developer">Full Stack Developer</option>
+
+    </select>
+
+
+    <div class="mb-3">
+      <label for="joblocation" class="form-label">Enter job location</label>
+      <input type="text" class="form-control" id="joblocation" name="joblocation" value="<%=job.joblocation%>">
+    </div>
+    <div class="mb-3 input group">
+      <span class="input-group-text" id="companyname">Company Name</span>
+      <input type="text" class="form-control" id="companyname" name="companyname" value="<%=job.companyname%>">
+    </div>
+    <div class="input-group mb-3">
+      <input required name="salary" type="text" class="form-control" placeholder="enter salary" name="salary"
+        id="salary" value="<%=job.salary%>" />
+      <span class="input-group-text">Total Positions</span>
+      <input required name="numberofopenings" type="number" class="form-control" placeholder="total no of openings"
+        aria-label="Server" value="<%=job.numberofopenings%>" />
+    </div>
+    <div class="input-group mb-3">
+      <select required multiple name="skillsrequired" class="form-select" aria-label="Default select example">
+        <option disabled selected>select skills required for this job</option>
+        <option value="React">React</option>
+        <option value="NodeJs">NodeJs</option>
+        <option value="Angular">Angular</option>
+        <option value="MongoDB">MongoDB</option>
+        <option value="SQL">SQL</option>
+        <option value="Express">Express</option>
+        <option value="Java">Java</option>
+        <option value="SpringBoot">SpringBoot</option>
+        <option value="C++">C++</option>
+        <option value="Data Structures & Algo">Data Structures & Algo</option>
+      </select>
+
+      <!-- <select required multiple name="skillsrequired" class="form-select" aria-label="Default select example">
+            <option disabled>select skills required for this job</option>
+            <% job.skillsrequired.forEach(skill => { %>
+                <option value="<%= skill %>" 
+                  <% if (job.skillsrequired.includes(skill)) { %> selected <% } %>><%= skill %></option>
+            <% }); %>
+        </select> -->
+
+      <span class="input-group-text">Apply By</span>
+      <input name="applyby" type="date" class="form-control" placeholder="total no of openings" aria-label="Server" />
+    </div>
+    <button type="submit" class="w-100 mb-3 mt-2 btn btn-md btn-success">Update</button>
+  </form>
+</div>
+</div>
